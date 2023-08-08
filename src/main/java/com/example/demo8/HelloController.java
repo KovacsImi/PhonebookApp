@@ -6,6 +6,7 @@ import java.util.ResourceBundle;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
@@ -43,11 +44,21 @@ public class HelloController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+
         TableColumn lastNameCol = new TableColumn("Vezetéknév");
         lastNameCol.setMinWidth(100);
         lastNameCol.setCellFactory(TextFieldTableCell.forTableColumn());
         lastNameCol.setCellValueFactory(new PropertyValueFactory<Human, SimpleStringProperty>("lastName"));
 
+
+        lastNameCol.setOnEditCommit(
+                new EventHandler<TableColumn.CellEditEvent<Human, String>>() {
+                    @Override
+                    public void handle(TableColumn.CellEditEvent<Human, String> cellEditEvent) {
+
+                    }
+                }
+        );
 
         TableColumn firstNameCol = new TableColumn("Keresztnév");
         firstNameCol.setMinWidth(100);
