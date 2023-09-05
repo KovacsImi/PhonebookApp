@@ -51,4 +51,16 @@ public class Human {
     public SimpleStringProperty emailProperty() {
         return email;
     }
+
+    public void setFirstName(String firstName) {
+        this.firstName.set(firstName);
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName.set(lastName);
+    }
+
+    public void setEmail(String email) {
+        this.email.set(email);
+    }
 }
