@@ -63,4 +63,9 @@ public class Human {
     public void setEmail(String email) {
         this.email.set(email);
     }
+
+//    @Override
+//    public String toString() {
+//        return lastName + " " + firstName + " "  + email;
+//    }
 }

@@ -62,18 +62,28 @@ public class ViewController implements Initializable {
                     new Human("Gábor2", "Dénes2", "gabordenes2@pelda.hu"));
 
     @FXML
-    private  void addContact(ActionEvent event){
+    private void addContact(ActionEvent event) {
         Pattern pattern = Pattern.compile(".+@.+\\..+");
         Matcher matcher = pattern.matcher(inputEmail.getText());
 
-        if(matcher.find()){
-
+        if (matcher.find()) {
             data.add(new Human(inputFirstname.getText(), inputLastname.getText(), inputEmail.getText()));
             inputFirstname.clear();
             inputLastname.clear();
-            inputEmail.clear();}
+            inputEmail.clear();
+        }
+    }
 
-
+    @FXML
+    private void exportList() {
+        String fileName = inputExportName.getText();
+        //fileName = fileName.trim();
+        fileName = fileName.replace("\\s+", "");
+        if (!fileName.isEmpty()) {
+            PdfGeneration pdfGeneration = new PdfGeneration();
+            pdfGeneration.pdfGeneration(fileName, data);
+            inputExportName.clear();
+        }
 
     }
 
@@ -81,12 +91,9 @@ public class ViewController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         setTableData();
         setMenuData();
-        PdfGeneration pdfGeneration = new PdfGeneration();
-        pdfGeneration.pdfGeneration("filename", "Test Text");
 
 
     }
-
 
 
     private void setMenuData() {

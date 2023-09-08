@@ -46,7 +46,7 @@
                   </Pane>
                   <Pane id="exportPane" fx:id="exportPane" prefHeight="541.0" prefWidth="417.0" visible="false">
                      <children>
-                        <Button id="exportButton" fx:id="exportButton" layoutX="182.0" layoutY="208.0" mnemonicParsing="false" text="Export PDF" />
+                        <Button id="exportButton" fx:id="exportButton" onAction="#exportList" layoutX="182.0" layoutY="208.0" mnemonicParsing="false" text="Export PDF" />
                         <TextField id="inputExport" fx:id="inputExportName" layoutX="100.0" layoutY="163.0" prefHeight="25.0" prefWidth="240.0" />
                         <Label layoutX="178.0" layoutY="129.0" text="File Name">
                            <font>
