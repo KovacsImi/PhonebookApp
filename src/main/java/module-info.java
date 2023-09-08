@@ -2,6 +2,7 @@ module com.example.demo8 {
     requires javafx.controls;
     requires javafx.fxml;
     requires itextpdf;
+    requires java.sql;
 
 
     opens com.example.demo8 to javafx.fxml;
