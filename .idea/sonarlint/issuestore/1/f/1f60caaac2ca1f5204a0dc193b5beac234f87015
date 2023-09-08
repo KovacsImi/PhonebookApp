@@ -1,0 +1,49 @@
+
+L
+java:S3740"/Provide the parametrized type for this generic.(èÿğñ8Œáºş¦1
+Q
+java:S3740X"/Provide the parametrized type for this generic.(©¿¦Ûıÿÿÿÿ8Œáºş¦1
+L
+java:S3740u"/Provide the parametrized type for this generic.(¯¤¶œ8Œáºş¦1
+L
+java:S3740u"/Provide the parametrized type for this generic.(¯¤¶œ8Œáºş¦1
+M
+java:S3740ˆ"/Provide the parametrized type for this generic.(‡Şñô8Œáºş¦1
+M
+java:S3740ˆ"/Provide the parametrized type for this generic.(‡Şñô8Œáºş¦1
+R
+java:S3740™"/Provide the parametrized type for this generic.(ğùíşúÿÿÿÿ8Œáºş¦1
+R
+java:S3740™"/Provide the parametrized type for this generic.(ğùíşúÿÿÿÿ8Œáºş¦1
+J
+java:S1604X"(Make this anonymous inner class a lambda(©¿¦Ûıÿÿÿÿ8áºş¦1
+E
+java:S1604|"(Make this anonymous inner class a lambda(®œ„Ù8áºş¦1
+F
+java:S1604"(Make this anonymous inner class a lambda(®œ„Ù8áºş¦1
+h
+java:S1301`"KReplace this "switch" statement by "if" statements to increase readability.(„©úÎ8áºş¦1
+y	java:S116*"XRename this field "MENU_CONTACTS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡ğ´‡øÿÿÿÿ8ªáºş¦1
+p	java:S116+"TRename this field "MENU_LIST" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ş’¨ß8ªáºş¦1
+w	java:S116,"VRename this field "MENU_EXPORT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(êöÎ¶ùÿÿÿÿ8ªáºş¦1
+u	java:S116-"TRename this field "MENU_EXIT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜í±Òÿÿÿÿÿ8ªáºş¦1
+C
+java:S1170*"!Make this final field static too.(¡ğ´‡øÿÿÿÿ8ªáºş¦1
+>
+java:S1170+"!Make this final field static too.(ş’¨ß8ªáºş¦1
+C
+java:S1170,"!Make this final field static too.(êöÎ¶ùÿÿÿÿ8ªáºş¦1
+C
+java:S1170-"!Make this final field static too.(˜í±Òÿÿÿÿÿ8ªáºş¦1
+Y
+java:S1854?"<Remove this useless assignment to local variable "document".(Œ¾œÉ8š¢Àş¦1
+[
+java:S1172>">Remove these unused method parameters "fajlev", "tesztSzoveg".(ÿ“É€8°áºş¦1
+J
+java:S1481?"-Remove this unused "document" local variable.(Œ¾œÉ8š¢Àş¦1
+>	java:S131`""Add a default case to this switch.(„©úÎ8¸áºş¦1
+E	java:S108d")Either remove or fill this block of code.(”ı¾8¸áºş¦1
+J
+java:S1905"(Remove this unnecessary cast to "Human".(ş‹˜ıûÿÿÿÿ8¥¢Àş¦1
+K
+java:S1905‘"(Remove this unnecessary cast to "Human".(ş‹˜ıûÿÿÿÿ8§¢Àş¦1

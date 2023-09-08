@@ -1,9 +1,16 @@
 package com.example.demo8;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
+import com.itextpdf.text.Document;
+import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.pdf.PdfWriter;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -55,8 +62,13 @@ public class HelloController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         setTableData();
         setMenuData();
+        PdfGeneration pdfGeneration = new PdfGeneration();
+        pdfGeneration.pdfGeneration("filename", "Test Text");
+
 
     }
+
+
 
     private void setMenuData() {
         TreeItem<String> treeItemRoot1 = new TreeItem<>("Menü");
