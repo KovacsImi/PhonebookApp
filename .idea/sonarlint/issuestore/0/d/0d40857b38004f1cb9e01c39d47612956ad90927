@@ -1,19 +1,19 @@
 
 q
-java:S2095d"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(½¨“Ğúÿÿÿÿ8ã”×¤§1
+java:S2095c"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(½¨“Ğúÿÿÿÿ8ûÆ€Ë§1
 q
-java:S2095S"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(½¨“Ğúÿÿÿÿ8“ÃÖ¤§1
-r	java:S116	"VRename this field "JDBC_DRIVER" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒÒ²º8“ÃÖ¤§1
-j	java:S116
-"NRename this field "URL" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÀÀ€×8“ÃÖ¤§1
-t	java:S116"SRename this field "USERNAME" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß€Õÿÿÿÿÿ8“ÃÖ¤§1
-o	java:S116"SRename this field "PASSWORD" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’„í×8“ÃÖ¤§1
+java:S2095R"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(½¨“Ğúÿÿÿÿ8ûÆ€Ë§1
+r	java:S116	"VRename this field "JDBC_DRIVER" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒÒ²º8ûÆ€Ë§1
+o	java:S116
+"NRename this field "URL" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŸÆ¾‚øÿÿÿÿ8ûÆ€Ë§1
+t	java:S116"SRename this field "USERNAME" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß€Õÿÿÿÿÿ8ûÆ€Ë§1
+o	java:S116"SRename this field "PASSWORD" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’„í×8ûÆ€Ë§1
 >
-java:S1170	"!Make this final field static too.(ƒÒ²º8“ÃÖ¤§1
->
-java:S1170
-"!Make this final field static too.(ÀÀ€×8”ÃÖ¤§1
+java:S1170	"!Make this final field static too.(ƒÒ²º8ûÆ€Ë§1
 C
-java:S1170"!Make this final field static too.(ß€Õÿÿÿÿÿ8”ÃÖ¤§1
+java:S1170
+"!Make this final field static too.(ŸÆ¾‚øÿÿÿÿ8üÆ€Ë§1
+C
+java:S1170"!Make this final field static too.(ß€Õÿÿÿÿÿ8üÆ€Ë§1
 >
-java:S1170"!Make this final field static too.(’„í×8”ÃÖ¤§1
+java:S1170"!Make this final field static too.(’„í×8üÆ€Ë§1

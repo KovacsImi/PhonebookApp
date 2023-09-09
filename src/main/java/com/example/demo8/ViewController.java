@@ -15,14 +15,17 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
 
 
 public class ViewController implements Initializable {
@@ -50,6 +53,12 @@ public class ViewController implements Initializable {
     @FXML
     Button exportButton;
 
+    @FXML
+    AnchorPane anchorPane;
+
+    @FXML
+    SplitPane splitPane;
+
     private final String MENU_CONTACTS = "Kontaktok";
     private final String MENU_LIST = "Lista";
     private final String MENU_EXPORT = "Exportálás";
@@ -58,11 +67,17 @@ public class ViewController implements Initializable {
             FXCollections.observableArrayList();
     DataBase dataBase = new DataBase();
 
+
+
     @FXML
     private void addContact(ActionEvent event) {
         Pattern pattern = Pattern.compile(".+@.+\\..+");
         Matcher matcher = pattern.matcher(inputEmail.getText());
         Human newHuman = new Human(inputFirstname.getText(), inputLastname.getText(), inputEmail.getText());
+        if(!matcher.find()){
+            alert("Please give a proper e-mail address!");
+        }
+
         if (matcher.find()) {
             dataBase.addContact(newHuman);
             data.add(newHuman);
@@ -81,18 +96,11 @@ public class ViewController implements Initializable {
             PdfGeneration pdfGeneration = new PdfGeneration();
             pdfGeneration.pdfGeneration(fileName, data);
             inputExportName.clear();
+        }else{
+            alert("Please give a proper file name!");
         }
 
     }
-
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        setTableData();
-        setMenuData();
-
-
-    }
-
 
     private void setMenuData() {
         TreeItem<String> treeItemRoot1 = new TreeItem<>("Menü");
@@ -205,5 +213,36 @@ public class ViewController implements Initializable {
         table.getColumns().addAll(lastNameCol, firstNameCol, emailCol);
         data.addAll(dataBase.getAllContacts());
         table.setItems(data);
+    }
+
+    private void alert(String text){
+        splitPane.setDisable(true);
+        splitPane.setOpacity(0.4);
+
+        Label label = new Label(text);
+        Button alertButton = new Button("OK");
+        VBox vBox = new VBox(label, alertButton);
+        vBox.setAlignment(Pos.CENTER);
+
+        alertButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                splitPane.setDisable(false);
+                splitPane.setOpacity(1);
+                vBox.setVisible(false);
+            }
+        });
+
+        anchorPane.getChildren().add(vBox);
+        anchorPane.setTopAnchor(vBox, 300.0);
+        anchorPane.setLeftAnchor(vBox, 300.0);
+
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        setTableData();
+        setMenuData();
+
     }
 }
