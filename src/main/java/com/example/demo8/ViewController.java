@@ -54,20 +54,18 @@ public class ViewController implements Initializable {
     private final String MENU_LIST = "Lista";
     private final String MENU_EXPORT = "Exportálás";
     private final String MENU_EXIT = "Kilépés";
-
-
     private final ObservableList<Human> data =
-            FXCollections.observableArrayList(
-                    new Human("Gábor", "Dénes", "gabordenes@pelda.hu"),
-                    new Human("Gábor2", "Dénes2", "gabordenes2@pelda.hu"));
+            FXCollections.observableArrayList();
+    DataBase dataBase = new DataBase();
 
     @FXML
     private void addContact(ActionEvent event) {
         Pattern pattern = Pattern.compile(".+@.+\\..+");
         Matcher matcher = pattern.matcher(inputEmail.getText());
-
+        Human newHuman = new Human(inputFirstname.getText(), inputLastname.getText(), inputEmail.getText());
         if (matcher.find()) {
-            data.add(new Human(inputFirstname.getText(), inputLastname.getText(), inputEmail.getText()));
+            dataBase.addContact(newHuman);
+            data.add(newHuman);
             inputFirstname.clear();
             inputLastname.clear();
             inputEmail.clear();
@@ -165,10 +163,10 @@ public class ViewController implements Initializable {
                 new EventHandler<TableColumn.CellEditEvent<Human, String>>() {
                     @Override
                     public void handle(TableColumn.CellEditEvent<Human, String> t) {
-                        ((Human) t.getTableView().getItems().get(
-                                t.getTablePosition().getRow())
-                        ).setLastName(t.getNewValue());
-
+                        Human actualHuman = (Human) t.getTableView().getItems().get(
+                                t.getTablePosition().getRow());
+                        actualHuman.setLastName(t.getNewValue());
+                        dataBase.updateContact(actualHuman);
                     }
                 }
         );
@@ -180,14 +178,12 @@ public class ViewController implements Initializable {
         firstNameCol.setCellValueFactory(new PropertyValueFactory<Human, String>("firstName"));
 
         firstNameCol.setOnEditCommit(
-                new EventHandler<TableColumn.CellEditEvent<Human, String>>() {
-                    @Override
-                    public void handle(TableColumn.CellEditEvent<Human, String> t) {
-                        ((Human) t.getTableView().getItems().get(
-                                t.getTablePosition().getRow())
-                        ).setFirstName(t.getNewValue());
+                (EventHandler<TableColumn.CellEditEvent<Human, String>>) t -> {
+                    Human actualHuman = (Human) t.getTableView().getItems().get(
+                            t.getTablePosition().getRow());
+                    actualHuman.setFirstName(t.getNewValue());
+                    dataBase.updateContact(actualHuman);
 
-                    }
                 }
         );
 
@@ -197,12 +193,17 @@ public class ViewController implements Initializable {
         emailCol.setCellValueFactory(new PropertyValueFactory<Human, String>("email"));
 
         emailCol.setOnEditCommit(
-                (EventHandler<TableColumn.CellEditEvent<Human, String>>) t -> (t.getTableView().getItems().get(
-                        t.getTablePosition().getRow())
-                ).setEmail(t.getNewValue())
+                (EventHandler<TableColumn.CellEditEvent<Human, String>>) t -> {
+
+                    Human actualHuman = (Human) t.getTableView().getItems().get(
+                            t.getTablePosition().getRow());
+                    actualHuman.setEmail(t.getNewValue());
+                    dataBase.updateContact(actualHuman);
+                }
         );
 
         table.getColumns().addAll(lastNameCol, firstNameCol, emailCol);
+        data.addAll(dataBase.getAllContacts());
         table.setItems(data);
     }
 }
