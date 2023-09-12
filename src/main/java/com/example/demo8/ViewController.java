@@ -102,6 +102,9 @@ public class ViewController implements Initializable {
     }
 
     private void setMenuData() {
+        splitPane.setDividerPositions(0.2);
+        menuPane.maxWidthProperty().bind(splitPane.widthProperty().multiply(0.25));
+
         TreeItem<String> treeItemRoot1 = new TreeItem<>("Menü");
         TreeView<String> treeView = new TreeView<>(treeItemRoot1);
         treeView.setShowRoot(false);
@@ -141,6 +144,7 @@ public class ViewController implements Initializable {
                         case MENU_LIST:
                             contactPane.setVisible(true);
                             exportPane.setVisible(false);
+                            //contactPane.prefHeightProperty().bind(anchorPane.widthProperty());
                             break;
                         case MENU_EXPORT:
                             exportPane.setVisible(true);
@@ -246,6 +250,7 @@ public class ViewController implements Initializable {
         table.getColumns().addAll(lastNameCol, firstNameCol, emailCol, removeCol);
         data.addAll(dataBase.getAllContacts());
         table.setItems(data);
+
     }
 
     private void alert(String text) {
@@ -269,6 +274,7 @@ public class ViewController implements Initializable {
         anchorPane.getChildren().add(vBox);
         anchorPane.setTopAnchor(vBox, 300.0);
         anchorPane.setLeftAnchor(vBox, 300.0);
+
 
     }
 
