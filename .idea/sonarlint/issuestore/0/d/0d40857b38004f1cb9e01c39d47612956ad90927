@@ -1,8 +1,10 @@
 
 q
-java:S2095c"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(½¨“Ğúÿÿÿÿ8ûÆ€Ë§1
+java:S2095q"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(½¨“Ğúÿÿÿÿ8ûÆ€Ë§1
 q
-java:S2095R"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(½¨“Ğúÿÿÿÿ8ûÆ€Ë§1
+java:S2095b"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(½¨“Ğúÿÿÿÿ8½È¨1
+q
+java:S2095R"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(½¨“Ğúÿÿÿÿ8‰¿¼È¨1
 r	java:S116	"VRename this field "JDBC_DRIVER" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒÒ²º8ûÆ€Ë§1
 o	java:S116
 "NRename this field "URL" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŸÆ¾‚øÿÿÿÿ8ûÆ€Ë§1

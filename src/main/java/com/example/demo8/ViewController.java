@@ -81,7 +81,7 @@ public class ViewController implements Initializable {
             inputFirstname.clear();
             inputLastname.clear();
             inputEmail.clear();
-        }else{
+        } else {
             alert("Please give a proper e-mail address!");
         }
     }
@@ -102,8 +102,8 @@ public class ViewController implements Initializable {
     }
 
     private void setMenuData() {
-        splitPane.setDividerPositions(0.2);
-        menuPane.maxWidthProperty().bind(splitPane.widthProperty().multiply(0.25));
+        menuPane.setMinWidth(200);
+        menuPane.setMaxWidth(200);
 
         TreeItem<String> treeItemRoot1 = new TreeItem<>("Menü");
         TreeView<String> treeView = new TreeView<>(treeItemRoot1);

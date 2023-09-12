@@ -47,7 +47,7 @@ public class PdfGeneration {
             table.getDefaultCell().setHorizontalAlignment(Element.ALIGN_CENTER);
 
             for (int userDataRow = 1; userDataRow <= data.size(); userDataRow++) {
-                Human human = data.get(userDataRow-1);
+                Human human = data.get(userDataRow - 1);
 
                 table.addCell(String.valueOf(userDataRow));
                 table.addCell(human.getLastName());

@@ -20,9 +20,9 @@
       </Label>
       <SplitPane id="splitPane" fx:id="splitPane" dividerPositions="0.21679197994987467" layoutY="56.0" minHeight="0.0" minWidth="0.0" prefHeight="627.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="56.0">
         <items>
-          <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="297.0" prefWidth="277.0">
+          <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="297.0" prefWidth="277.0">
                <children>
-                  <StackPane id="menuPane" fx:id="menuPane" prefHeight="543.0" prefWidth="175.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <StackPane id="menuPane" fx:id="menuPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="543.0" prefWidth="175.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                </children>
             </AnchorPane>
           <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="518.0" prefWidth="411.0">

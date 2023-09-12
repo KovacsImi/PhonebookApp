@@ -4,7 +4,7 @@ import javafx.beans.property.SimpleStringProperty;
 
 public class Human {
     private final SimpleStringProperty firstName;
-    private final  SimpleStringProperty lastName;
+    private final SimpleStringProperty lastName;
     private final SimpleStringProperty email;
     private final SimpleStringProperty ID;
 
@@ -23,7 +23,7 @@ public class Human {
         this.ID = new SimpleStringProperty("0");
     }
 
-    public Human(Integer id,String firstName, String lastName, String email) {
+    public Human(Integer id, String firstName, String lastName, String email) {
         this.firstName = new SimpleStringProperty(firstName);
         this.lastName = new SimpleStringProperty(lastName);
         this.email = new SimpleStringProperty(email);

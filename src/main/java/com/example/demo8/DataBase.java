@@ -64,7 +64,7 @@ public class DataBase {
             listOfUsers = new ArrayList<>();
 
             while (resultSet.next()) {
-                Human actualContact = new Human(resultSet.getInt("id") ,resultSet.getString("firstname"), resultSet.getString("lastname"), resultSet.getString("email"));
+                Human actualContact = new Human(resultSet.getInt("id"), resultSet.getString("firstname"), resultSet.getString("lastname"), resultSet.getString("email"));
                 listOfUsers.add(actualContact);
             }
 
@@ -88,7 +88,6 @@ public class DataBase {
             System.out.println("Valami baj van a kontakt hozzáadásakor.");
             System.out.println(e.getMessage());
         }
-
 
 
     }
@@ -119,7 +118,6 @@ public class DataBase {
             System.out.println(e.getMessage());
         }
     }
-
 
 
 }
