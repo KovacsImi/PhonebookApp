@@ -171,7 +171,7 @@ public class ViewController implements Initializable {
                 new Callback<>() {
                     @Override
                     public TableCell call(final TableColumn<Human, String> param) {
-                        final TableCell<Human, String> cell = new TableCell<Human, String>() {
+                        return new TableCell<Human, String>() {
                             final Button button = new Button("Törlés");
 
                             @Override
@@ -192,7 +192,6 @@ public class ViewController implements Initializable {
                                 }
                             }
                         };
-                        return cell;
                     }
                 };
 
