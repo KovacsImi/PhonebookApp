@@ -41,7 +41,7 @@
                         <Label alignment="CENTER_RIGHT" layoutX="126.0" layoutY="464.0" text="Vezetéknév:" textAlignment="CENTER" />
                         <Label alignment="CENTER_RIGHT" layoutX="128.0" layoutY="507.0" text="Keresztnév:" textAlignment="CENTER" />
                         <Label alignment="CENTER_RIGHT" layoutX="129.0" layoutY="550.0" text="E-mail cím:" textAlignment="CENTER" />
-                        <Button id="addNewContactButton" fx:id="addNewContactButton" layoutX="396.0" layoutY="503.0" mnemonicParsing="false" onAction="#addContact" text="Házzáadás" />
+                        <Button id="addNewContactButton" fx:id="addNewContactButton" layoutX="396.0" layoutY="503.0" mnemonicParsing="false" onAction="#addContact" text="Hozzáadás" />
                      </children>
                   </Pane>
                   <Pane id="exportPane" fx:id="exportPane" disable="true" prefHeight="541.0" prefWidth="417.0" visible="false">

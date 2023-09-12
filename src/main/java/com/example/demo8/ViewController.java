@@ -41,7 +41,7 @@ public class ViewController implements Initializable {
     @FXML
     TextField inputEmail;
     @FXML
-    TextField addnewContactButton;
+    Button addNewContactButton;
     @FXML
     StackPane menuPane;
     @FXML
@@ -74,17 +74,15 @@ public class ViewController implements Initializable {
     private void addContact(ActionEvent event) {
         Pattern pattern = Pattern.compile(".+@.+\\..+");
         Matcher matcher = pattern.matcher(inputEmail.getText());
-        Human newHuman = new Human(inputFirstname.getText(), inputLastname.getText(), inputEmail.getText());
-        if (!matcher.find()) {
-            alert("Please give a proper e-mail address!");
-        }
-
         if (matcher.find()) {
+            Human newHuman = new Human(inputFirstname.getText(), inputLastname.getText(), inputEmail.getText());
             dataBase.addContact(newHuman);
             data.add(newHuman);
             inputFirstname.clear();
             inputLastname.clear();
             inputEmail.clear();
+        }else{
+            alert("Please give a proper e-mail address!");
         }
     }
 
