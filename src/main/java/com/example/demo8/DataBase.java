@@ -106,10 +106,20 @@ public class DataBase {
             System.out.println("Valami baj van a kontakt hozzáadásakor.");
             System.out.println(e.getMessage());
         }
-
-
-
     }
+
+    public void removeContact(Human human) {
+        String sql = "delete from contacts where id = ?";
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, human.getID());
+            preparedStatement.execute();
+        } catch (SQLException e) {
+            System.out.println("Valami baj van a kontakt törlése során.");
+            System.out.println(e.getMessage());
+        }
+    }
+
 
 
 }

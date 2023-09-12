@@ -1,42 +1,48 @@
 
 L
-java:S3740"/Provide the parametrized type for this generic.(θÿπρ8— Λ§1
+java:S3740""/Provide the parametrized type for this generic.(θÿπρ8―‹ΩÒ§1
 Q
-java:S3740w"/Provide the parametrized type for this generic.(©Ώ¦Ϋύÿÿÿÿ8— Λ§1
+java:S3740"/Provide the parametrized type for this generic.(©Ώ¦Ϋύÿÿÿÿ8―‹ΩÒ§1
 M
-java:S3740"/Provide the parametrized type for this generic.(―¤¶8— Λ§1
+java:S3740¤"/Provide the parametrized type for this generic.(―¤¶8―‹ΩÒ§1
 M
-java:S3740"/Provide the parametrized type for this generic.(―¤¶8— Λ§1
+java:S3740¤"/Provide the parametrized type for this generic.(―¤¶8°‹ΩÒ§1
 M
-java:S3740―"/Provide the parametrized type for this generic.(‡ήρτ8— Λ§1
+java:S3740·"/Provide the parametrized type for this generic.(‡ήρτ8°‹ΩÒ§1
 M
-java:S3740―"/Provide the parametrized type for this generic.(‡ήρτ8— Λ§1
+java:S3740·"/Provide the parametrized type for this generic.(‡ήρτ8°‹ΩÒ§1
 R
-java:S3740Ύ"/Provide the parametrized type for this generic.(πωνώϊÿÿÿÿ8— Λ§1
+java:S3740Ζ"/Provide the parametrized type for this generic.(πωνώϊÿÿÿÿ8°‹ΩÒ§1
 R
-java:S3740Ύ"/Provide the parametrized type for this generic.(πωνώϊÿÿÿÿ8— Λ§1
+java:S3740Ζ"/Provide the parametrized type for this generic.(πωνώϊÿÿÿÿ8°‹ΩÒ§1
 J
-java:S1604w"(Make this anonymous inner class a lambda(©Ώ¦Ϋύÿÿÿÿ8— Λ§1
+java:S1604"(Make this anonymous inner class a lambda(©Ώ¦Ϋύÿÿÿÿ8±‹ΩÒ§1
 F
-java:S1604£"(Make this anonymous inner class a lambda(®„Ω8— Λ§1
-y	java:S1165"XRename this field "MENU_CONTACTS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(΅π΄‡ψÿÿÿÿ8Ύ— Λ§1
-p	java:S1166"TRename this field "MENU_LIST" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ώ’¨ί8Ύ— Λ§1
-w	java:S1167"VRename this field "MENU_EXPORT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(κφΞ¶ωÿÿÿÿ8Ύ— Λ§1
-u	java:S1168"TRename this field "MENU_EXIT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ν±Òÿÿÿÿÿ8Ύ— Λ§1
+java:S1604«"(Make this anonymous inner class a lambda(®„Ω8±‹ΩÒ§1
+K
+java:S1604γ"(Make this anonymous inner class a lambda(δήϋνώÿÿÿÿ8Ώ³ΩÒ§1
+y	java:S116>"XRename this field "MENU_CONTACTS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(΅π΄‡ψÿÿÿÿ8Σ‹ΩÒ§1
+p	java:S116?"TRename this field "MENU_LIST" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ώ’¨ί8Σ‹ΩÒ§1
+w	java:S116@"VRename this field "MENU_EXPORT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(κφΞ¶ωÿÿÿÿ8Σ‹ΩÒ§1
+u	java:S116A"TRename this field "MENU_EXIT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ν±Òÿÿÿÿÿ8Σ‹ΩÒ§1
 C
-java:S11705"!Make this final field static too.(΅π΄‡ψÿÿÿÿ8Ύ— Λ§1
+java:S1170>"!Make this final field static too.(΅π΄‡ψÿÿÿÿ8Σ‹ΩÒ§1
 >
-java:S11706"!Make this final field static too.(ώ’¨ί8Ώ— Λ§1
+java:S1170?"!Make this final field static too.(ώ’¨ί8Σ‹ΩÒ§1
 C
-java:S11707"!Make this final field static too.(κφΞ¶ωÿÿÿÿ8Ώ— Λ§1
+java:S1170@"!Make this final field static too.(κφΞ¶ωÿÿÿÿ8Σ‹ΩÒ§1
 C
-java:S11708"!Make this final field static too.(ν±Òÿÿÿÿÿ8Ώ— Λ§1
-X	java:S125N"<This block of commented-out lines of code should be removed.(†ώΝ8Γ— Λ§1
->	java:S131""Add a default case to this switch.(„©ϊΞ8Μ— Λ§1
-F	java:S108ƒ")Either remove or fill this block of code.(”ύΎ8Ν— Λ§1
+java:S1170A"!Make this final field static too.(ν±Òÿÿÿÿÿ8Σ‹ΩÒ§1
+X	java:S125]"<This block of commented-out lines of code should be removed.(†ώΝ8Ω‹ΩÒ§1
+?	java:S131‡""Add a default case to this switch.(„©ϊΞ8α‹ΩÒ§1
+F	java:S108‹")Either remove or fill this block of code.(”ύΎ8β‹ΩÒ§1
 F
-java:S1905¦"(Remove this unnecessary cast to "Human".(‚οΐ8Ρ— Λ§1
+java:S1905®"(Remove this unnecessary cast to "Human".(‚οΐ8ζ‹ΩÒ§1
 F
-java:S1905¶"(Remove this unnecessary cast to "Human".(‚οΐ8Σ— Λ§1
+java:S1905Ύ"(Remove this unnecessary cast to "Human".(‚οΐ8η‹ΩÒ§1
 F
-java:S1905Ζ"(Remove this unnecessary cast to "Human".(‚οΐ8Τ— Λ§1
+java:S1905Ξ"(Remove this unnecessary cast to "Human".(‚οΐ8ι‹ΩÒ§1
+X
+java:S2209ν"5Change this instance-reference to a static reference.(ΣΏοΕύÿÿÿÿ8μ‹ΩÒ§1
+X
+java:S2209ξ"5Change this instance-reference to a static reference.(ς΅Πÿÿÿÿÿ8μ‹ΩÒ§1

@@ -27,6 +27,8 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 
+import javafx.util.Callback;
+
 
 public class ViewController implements Initializable {
 
@@ -68,13 +70,12 @@ public class ViewController implements Initializable {
     DataBase dataBase = new DataBase();
 
 
-
     @FXML
     private void addContact(ActionEvent event) {
         Pattern pattern = Pattern.compile(".+@.+\\..+");
         Matcher matcher = pattern.matcher(inputEmail.getText());
         Human newHuman = new Human(inputFirstname.getText(), inputLastname.getText(), inputEmail.getText());
-        if(!matcher.find()){
+        if (!matcher.find()) {
             alert("Please give a proper e-mail address!");
         }
 
@@ -96,7 +97,7 @@ public class ViewController implements Initializable {
             PdfGeneration pdfGeneration = new PdfGeneration();
             pdfGeneration.pdfGeneration(fileName, data);
             inputExportName.clear();
-        }else{
+        } else {
             alert("Please give a proper file name!");
         }
 
@@ -161,8 +162,42 @@ public class ViewController implements Initializable {
     }
 
     private void setTableData() {
+        TableColumn removeCol = new TableColumn("Törlés");
+        removeCol.setMinWidth(100);
+        removeCol.setCellFactory(TextFieldTableCell.forTableColumn());
+
+
+        Callback<TableColumn<Human, String>, TableCell<Human, String>> cellFactory =
+                new Callback<>() {
+                    @Override
+                    public TableCell call(final TableColumn<Human, String> param) {
+                        final TableCell<Human, String> cell = new TableCell<Human, String>() {
+                            final Button button = new Button("Törlés");
+
+                            @Override
+                            public void updateItem(String item, boolean empty) {
+                                super.updateItem(item, empty);
+                                if (empty) {
+                                    setGraphic(null);
+                                    setText(null);
+                                } else {
+                                    button.setOnAction((ActionEvent event) ->
+                                    {
+                                        Human person = getTableView().getItems().get(getIndex());
+                                        data.remove(person);
+                                        dataBase.removeContact(person);
+                                    });
+                                    setGraphic(button);
+                                    setText(null);
+                                }
+                            }
+                        };
+                        return cell;
+                    }
+                };
+
         TableColumn lastNameCol = new TableColumn("Vezetéknév");
-        lastNameCol.setMinWidth(100);
+        lastNameCol.setMinWidth(130);
         lastNameCol.setCellFactory(TextFieldTableCell.forTableColumn());
         lastNameCol.setCellValueFactory(new PropertyValueFactory<Human, SimpleStringProperty>("lastName"));
 
@@ -181,7 +216,7 @@ public class ViewController implements Initializable {
 
 
         TableColumn firstNameCol = new TableColumn("Keresztnév");
-        firstNameCol.setMinWidth(100);
+        firstNameCol.setMinWidth(130);
         firstNameCol.setCellFactory(TextFieldTableCell.forTableColumn());
         firstNameCol.setCellValueFactory(new PropertyValueFactory<Human, String>("firstName"));
 
@@ -196,7 +231,7 @@ public class ViewController implements Initializable {
         );
 
         TableColumn emailCol = new TableColumn("E-mail cím");
-        emailCol.setMinWidth(200);
+        emailCol.setMinWidth(220);
         emailCol.setCellFactory(TextFieldTableCell.forTableColumn());
         emailCol.setCellValueFactory(new PropertyValueFactory<Human, String>("email"));
 
@@ -210,12 +245,13 @@ public class ViewController implements Initializable {
                 }
         );
 
-        table.getColumns().addAll(lastNameCol, firstNameCol, emailCol);
+        removeCol.setCellFactory(cellFactory);
+        table.getColumns().addAll(lastNameCol, firstNameCol, emailCol, removeCol);
         data.addAll(dataBase.getAllContacts());
         table.setItems(data);
     }
 
-    private void alert(String text){
+    private void alert(String text) {
         splitPane.setDisable(true);
         splitPane.setOpacity(0.4);
 
